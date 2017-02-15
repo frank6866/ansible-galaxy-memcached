@@ -1,0 +1,12 @@
+---
+# tasks file for installing memcached on centos7
+
+- name: install memcached
+  yum: name=memcached state=present
+
+- name: template /etc/sysconfig/memcached
+  template: src=etc/sysconfig/memcached.j2 dest=/etc/sysconfig/memcached mode=644
+  notify: restart memcached
+
+- name: start and enable memcached
+  service: name=memcached state=started enabled=yes
