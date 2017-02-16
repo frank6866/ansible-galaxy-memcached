@@ -1,8 +1,3 @@
 ---
 # vars file for memcached
 
-PORT: 11211
-USER: memcached
-MAXCONN: 1024
-CACHESIZE: 64
-IPv4_address: 0.0.0.0

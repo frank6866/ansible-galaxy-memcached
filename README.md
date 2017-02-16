@@ -1,19 +1,19 @@
 openstack-base
 ==============
 
-Base configuration before installing openstack.
+memcached deployment.
 
 
 Role Variables
 --------------
+没有必须设置的变量, 可选的变量如下
 
 ```
-# optional vars in vars/main.yml
-ntp_servers:
-  - "ntp1.jst.mfeed.ad.jp iburst"
-  - "ntp2.jst.mfeed.ad.jp iburst"
-  - "ntp3.jst.mfeed.ad.jp iburst"
-
+memcached_port: 11211
+memcached_user: memcached
+memcached_maxconn: 1024
+memcached_cachesize: 64
+memcached_ipv4_address: 0.0.0.0
 ```
 
 
@@ -24,7 +24,7 @@ Example Playbook
 - hosts: all
   become: true
   roles:
-    - frank6866.openstack-base
+    - frank6866.memcached
 ```
 
 License
