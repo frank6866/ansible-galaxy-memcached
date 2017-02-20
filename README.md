@@ -1,4 +1,4 @@
-openstack-base
+memcached
 ==============
 
 memcached deployment.
@@ -6,7 +6,7 @@ memcached deployment.
 
 Role Variables
 --------------
-没有必须设置的变量, 可选的变量如下
+No required vars, the optional var as follows:
 
 ```
 memcached_port: 11211
@@ -21,10 +21,10 @@ Example Playbook
 ----------------
 
 ```
-- hosts: all
+- hosts: memcached
   become: true
   roles:
-    - frank6866.memcached
+    - /path/to/memcached
 ```
 
 License
