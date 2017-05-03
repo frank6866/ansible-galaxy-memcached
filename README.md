@@ -1,8 +1,7 @@
 memcached
 ==============
 
-memcached deployment.
-
+This role is used to deploy memcached.
 
 Role Variables
 --------------
@@ -27,8 +26,8 @@ Example Playbook
     - /path/to/memcached
 ```
 
-Verify memcached
-----------------
+Check memcached stats
+-----------------------
 ```
 $ memcached-tool 192.168.168.201:11211 stats
 #192.168.168.201:11211 Field       Value
